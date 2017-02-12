@@ -1,0 +1,309 @@
+// Aliase file
+// Sweden Control, Stockholm Control and Arlanda positions
+//----------------------------------------------------------------------
+// **** CHATT ****
+.m .chat
+.fpl please, re-send your flightplan
+//----------------------------------------------------------------------
+// **** CONTACT MESSAGES ****
+.onf Are you on this frequency?
+.co Please, advise if you copy?
+.ge good evening
+.rwb Aprooved, report when back
+//----------------------------------------------------------------------
+// **** Radar identification ****
+.sq squawk $squawk
+.sc squawk mode C
+.r Sweden Control identified
+.rc Sweden Control identified, climb to FL $2
+.sr Stockholm identified, climb to FL $1
+.rar Stockholm identified, information $atiscode($arr) valid
+.ar Stockholm Arrival identified
+.leave leaving my airspace radar service terminated and frequency change approved
+.unicom
+//----------------------------------------------------------------------
+// *** INBOUND CLEARANCE
+.aw Cleared to $arr via $STAR arrival for runway $arrrwy, when ready descend  to FL $1
+.ad Cleared to $arr via $STAR arrival for runway $arrrwy, descend  to FL $1
+.a cleared to $arr via $STAR for runway $arrrwy
+// ----------------------------------------------------------------------
+// **** ON GROUND ****
+.pb pushback approved
+.su start-up approved
+.supb start-up and pushback approved
+//----------------------------------------------------------------------
+// *** CLEARANCE ***
+.dci start-up approved, cleared to $arr via $sid departure, squawk $squawk. Information $atiscode($dep) valid QNH $altim($DEP) .
+.dc start-up approved, cleared to $arr via $sid departure, initially $temp, squawk $squawk.
+.ddct start-up approved, cleared to $arr via direct $1, initially $temp, squawk $squawk.
+.drh start-up approved, cleared to $arr after departure climb runway heading $temp, radar vectoring to $2, squawk $squawk .
+.rb readback correct
+//----------------------------------------------------------------------
+// *** TAXI ***
+.hp taxi to holding point runway $deprwy
+.hpy taxi to holding point runway $deprwy intersection §1 aprooved
+.hpv taxi to holding point runway $deprwy via taxiway §1
+.tl taxi and line-up runway $deprwy via $1
+.tlb taxi and line-up runway $deprwy via $1 and backtrack
+.s taxi to stand $1
+.sv taxi to stand $1 via taxiway $2
+//----------------------------------------------------------------------
+// **** ON THE RUNWAY
+.lu line-up runway $deprwy
+.lus line-up in sequence runway $deprwy
+.cto wind $wind($dep) , runway $deprwy cleared for take-off
+.ap taxi to stand $1, via backtrack and $2
+.on onground $1
+//----------------------------------------------------------------------
+// **** FINAL APPROACH
+.i cleared for ILS-approach runway $arrrwy
+.ri turn right heading $1, cleared for ILS-approach runway $arrrwy
+.li turn left heading $1, cleared for ILS-approach runway $arrrwy
+.capp runway $arrrwy continue approach, you are number $1, wind $wind($arr)
+.land runway $arrrwy cleared to land, wind $wind($arr)
+//----------------------------------------------------------------------
+// *** DESCEND / CLIMB ***
+.d descend FL $1
+.c climb FL $1
+.w when ready descend FL $1
+.dm descend and maintain FL $1 when reaching due to traffic
+.cm climb and maintain FL $1 when reaching due to traffic
+.d4 descend altitude 4000 feet
+.d25 descend altitude 2500 feet
+.da descend to altitude $1 feet
+.daq descend to altitude $1 feet, QNH $2
+.dat descend to altitude $1 feet, QNH $2, transition level $3
+.dl descend FL $1 to be level by $2
+.dlb descend FL $1 to be level $2 nm before $3
+.xd expedite descend to $1
+.xc expedite climb to FL $1
+.dr+ descend FL $1 at $2 feet per minute or greater (due traffic)
+.dr- descend FL $1 at $2 feet per minute or less (due traffic)
+.cr+ climb FL $1 at $2 feet per minute or greater (due traffic)
+.cr- climb FL $1 at $2 feet per minute or less (due traffic)
+//----------------------------------------------------------------------
+// *** SPEED ***
+.rs reduce to speed $1 knots
+.rias report indicated airspeed
+.rm report mach number (speed in mach)
+.i+ then meeting indicated airspeed, maintain speed $1 knots or greater due traffic
+.i- then meeting indicated airspeed, maintain speed $1 knots or less due traffic
+.m+ maintain mach . $1 or greater due traffic
+.m- maintain mach . $1 or less due traffic
+.sc+ maintain speed $1 or greater during climb due traffic
+.sc- maintain speed $1 or less during climb due traffic
+.cs reduce to minimum clean speed
+.rs18 reduce speed 180 knots
+.rs16 reduce speed 160 knots
+.out16 maintain speed 160 knots until outermaker
+.s86 maintain speed 180 knots until distance 6NM and speed 160 knots until distance 4NM
+.rsmin reduce minimum approach speed
+//----------------------------------------------------------------------
+// *** TURN / HEADING ***
+.fh fly heading $1
+.tr turn right heading $1
+.tl turn left heading $2
+.tl20 turn left 20 degrees and report new heading (due traffic)
+.tr20 turn right 20 degrees and report new heading (due traffic)
+.tl10 turn left 10 degrees and report new heading (due traffic)
+.tr10 turn right 10 degrees and report new heading (due traffic)
+.tl5 turn left 5 degrees and report new heading (due traffic)
+.tr5 turn right 5 degrees and report new heading (due traffic)
+.own resume own navigation direct $1 (free of conflicting traffic)
+.dct fly direct to $1
+//----------------------------------------------------------------------
+// **** TRANSFER OF COMMUNICATION ****
+//.ct contact $1 frequency $2
+
+.ctm contact $1 frequency $2
+
+//Arvids
+
+.ct Contact $radioname($1) $freq($1) ($atccallsign($1))
+.cso Contact $radioname($1) ($atccallsign($1)), callsign only, $freq($1)
+.rh Report your heading to $radioname($1) ($atccallsign($1)) $freq($1)
+.rs Report your speed to $radioname($1) ($atccallsign($1)) $freq($1)
+.rhs Report your heading and speed to $radioname($1) ($atccallsign($1)) $freq($1)
+.mon Monitor $radioname($1) ($atccallsign($1)) $freq($1)
+
+.cts1 Contact Sweden Control 118.400
+.cts2 Contact Sweden Control 133.700
+.cts3 Contact Sweden Control 131.125
+.cts4 Contact Sweden Control 118.200
+.cts6 Contact Sweden Control 132.475
+.cts7 Contact Sweden Control 118.275
+.cts8 Contact Sweden Control 129.175
+.ctsn Contact Sweden Control 132.150
+.ctsk Contact Sweden Control 131.050
+.ctsf Contact Sweden Control 124.425
+.ctm2 Contact Sweden Control 127.750
+.ctm3 Contact Sweden Control 128.050
+.ctm4 Contact Sweden Control 124.400
+.ctm5 Contact Sweden Control 128.625
+.ctm6 Contact Sweden Control 135.800
+.ctm7 Contact Sweden Control 124.150
+.ctm8 Contact Sweden Control 128.175
+.ctm9 Contact Sweden Control 135.975
+.ctmk Contact Sweden Control 124.850
+.ctml Contact Sweden Control 134.975
+.ctmw Contact Sweden Control 133.250
+.ctmy Contact Sweden Control 134.450
+
+.ctw Contact Stockholm Control 123.750
+.cte Contact Stockholm Control 126.650
+.cts Contact Stockholm Control 120.150
+.ctd Contact Stockholm Control 124.100
+.ctfe Contact Arrival 120.500, use your callsign only
+.ctfw Contact Arrival 119.620, use your callsign only
+
+.ctge Contact Göteborg Control 124.675
+.ctgw Contact Göteborg Control 124.200
+.ctgf Contact Arrival 120.120
+
+.ctokc Contact Östgöta Control 132.950
+
+.cttw Contact Tower 118.500
+.ctte Contact Tower 128.725
+.ctts Contact Tower 125.125
+.ctagn Contact Ground 121.925
+.ctagw Contact Ground 121.700
+.ctage Contact Ground 121.975
+.ctacd Contact Delivery 121.825
+
+.ctsb Contact Bromma Tower 118.100
+.stbg Contact Bromma Ground 121.600
+
+.ctow Contact Västerås Tower 120.300
+.ctoc Contact Västerås Control 125.950
+
+.ctgg Contact Tower 118.600
+.ctlgr Contact Ground 121.900
+.ctlcd Contact Delivery 121.675
+
+.ctokc Contact Östgöta Control 132.950
+
+.ctmq Contact Kalmar Tower 130.800
+
+.ctgj Contact Jönköping Tower 118.250
+
+.ctms Contact Tower 118.800
+.ctmg Contact Ground 121.700
+
+.ctekda Contact Copenhagen Control 121.375
+.ctekdc Contact Copenhagen Control 128.220
+.ctekdv Contact Copenhagen Control 126.050
+.ctchw Contact Copenhagen Approach 119.800
+.ctche Contact Copenhagen Approach 118.450
+
+.ctkrn Contact Rønne 118.325
+
+.ctno4 Contact Norway Control 118.875
+.ctno6 Contact Norway Control 120.375
+.ctno18 Contact Norway Control 125.700
+.ctno19 Contact Norway Control 131.100
+.ctno25 Contact Norway Control 126.450
+.ctno24 Contact Norway Control 118.550
+.ctnor Contact Norway Control 125.5
+.ctnors Contact Norway Control 118.550
+
+.ctngw Contact Oslo Approach 120.450
+.ctnge Contact Oslo Approach 118.475
+
+.ctnto Contact Farris Approach 134.050
+.ctnry Contact Farris Approach 124.350
+
+.ctefea Contact Tampere Radar 127.500
+.ctefeb Contact Tampere Radar 125.225
+.ctefec Contact Tampere Radar 132.675
+.ctefed Contact Tampere Radar 121.300
+.ctefee Contact Tampere Radar 134.575
+.ctefef Contact Tampere Radar 132.725
+.ctefeg Contact Tampere Radar 127.100
+.ctefeh Contact Tampere Radar 124.200
+.ctefej Contact Tampere Radar 126.100
+.ctefek Contact Tampere Radar 123.775
+.ctefem Contact Tampere Radar 132.325
+.ctefen Contact Tampere Radar 135.525
+.ctfra Contact Rovaniemi Radar 129.9
+
+.ctfmr Contact Mariehamn Radar 119.600
+.ctfma Contact Mariehamn Tower 119.600
+
+.cteett Contact Tallinn Control 134.325
+
+.cteyvl Contact Vilnius Control 133.3
+
+.ctevrr Contact Riga Control 135.1
+
+.ctumkk Contact Kaliningrad Control 123.7
+
+.ctepws Contact Warszawa Radar 134.925
+.ctepwn Contact Warszawa Radar 132.7
+.ctepgd Contact Gdansk approach 130.875
+
+.ctedwm Contact Bremen Radar 124.170
+.ctedwb Contact Bremen Radar 123.225
+.ctedwa Contact Bremen Radar 123.925
+.ctedww Contact Bremen Radar 128.750
+.ctedue Contact Rhein Radar 128.075
+
+.cteurn Contact Eurocontrol North 133.450
+.cteure Contact Eurocontrol East 135.3
+.cteurm Contact Maastricht 135.450
+.ctbalt Contact Baltic Control 132.300
+
+.unicom No further ATC available, monitor unicom 122.800
+//----------------------------------------------------------------------
+// **** VFR ****
+.cz lämna kontrolzonen $1 på $2 fot eller lägre, transponder $squawk
+.vd leave control zone via $1 at $2 ft or below, squawk $squawk
+//----------------------------------------------------------------------
+// **** STATUS MESSAGES ****
+.dep wind $wind($dep), departure runway $deprwy, temperature $1, QNH $altim($DEP).
+.arr metreport $arr, wind $1 degrees $3 knots, temperature $4 dewpoint $5, QNH $6, runway $7 in use.
+.close To all stations on this frequency Sweden control is now closing monitor unicom 122.8 - good bye
+.many to all stations on this frequency, at the moment we have heavy traffic and many pilots on the frequency, please, listen carefully to ATC instructions. Please, respond swiftly and make an effort to readback correctly. Thanks!
+.fn NOTAM - To leave the freq unattended for a period, please let me know beforehand - thanks.
+//----------------------------------------------------------------------
+// ***** APPROACH *****
+.info number $1 in sequence, expect about $2 track miles
+// ----------------------------------------------------------------------
+// **** HOLDINGS ****
+// ****
+.hold proceed to $1, hold $1 as published, expected approach time $2
+.holdd cleared to $1, hold $1 inbound track $3 degrees, $4 hand pattern, outbound time $5 minute, speed $6, expected further clearance at $7
+.holdsun cleared to SUN, hold SUN inbound track 335 degrees, left hand pattern, outbound time 1 minute
+.holdovdal join OVDAL holding inbound track 320 degrees, right hand pattern, outbound time 1.5 minute, speed 260 knots or less
+.holdtigba join TIGBA holding inbound track 170 degrees, right hand pattern, outbound time 1.5 minute, speed 260 knots or less
+.holdgevru join GEVRU holding inbound track 340 degrees, left hand pattern, outbound time 1.5 minute, speed 260 knots or less
+.holdmilnu cleared to MILNU, hold MILNU inbound track 095 degrees, left hand pattern, outbound time 1.5 minute, expected further clearance at $1
+.holdrasen cleared to RASEN, hold RASEN inbound track 040 degrees, right hand pattern, outbound time 1.5 minute, expected further clearance at $1
+.holddetmo cleared to DETMO, hold DETMO inbound track 025 degrees, right hand pattern, outbound time 1.5 minute, expected further clearance at $1
+.holdedaxa cleared to EDAXA, hold EDAXA inbound track 015 degrees, left hand pattern, outbound time 1.5 minute, expected further clearance at $1
+.holdunkas cleared to UNKAS, hold UNKAS inbound track 070 degrees, right hand pattern, outbound time 1.5 minute, expected further clearance at $1
+.holdbesla cleared to BESLA, hold BESLA inbound track 020 degrees, right hand pattern, outbound time 1.5 minute, expected further clearance at $1
+.holdelbog cleared to ELBOG, hold ELBOG inbound track 055 degrees, left hand pattern, outbound time 1.5 minute, expected further clearance at $1
+.holdbakil cleared to BAKIL, hold BAKIL inbound track 030 degrees, right hand pattern, outbound time 1.5 minute, expected further clearance at $1
+.holdpelup cleared to PELUP, hold PELUP inbound track 034 degrees, right hand pattern, outbound time 1.5 minute, expected further clearance at $1
+.holdpelit cleared to PELIT, hold PELIT inbound track 046 degrees, right hand pattern, outbound time 1.5 minute, expected further clearance at $1
+.holdnekla cleared to NEKLA, hold NEKLA inbound track 309 degrees, right hand pattern, outbound time 1.5 minute, expected further clearance at $1
+.holdtekva cleared to TEKVA, hold TEKVA inbound track 276 degrees, left hand pattern, outbound time 1.5 minute, expected further clearance at $1
+.holdxenta cleared to XENTA, hold XENTA inbound track 348 degrees, left hand pattern, outbound time 1.5 minute, expected further clearance at $1
+.holdkra cleared to KRA (Kiruna VOR), hold KRA inbound track 211 degrees, left hand pattern, outbound time 1.0 minute, speed 230 knots, expect further clearance at $1
+.halm cleared to ALM, hold ALM inbound track 294 degrees, right hand pattern outbound time 1.5 minute, speed 230 knots or less, expect approach clearance at $1
+.hbalvi cleared to BALVI, hold north BALVI inbound track 115 degrees, left hand pattern outbound time 1 minute, speed 230 knots or less, expect approach cleareance at $1
+.hlna cleared to LNA, hold north LNA inbound track 082 degrees, left hand pattern, outbound time 1 minute, speed 170 knots, expect approach clearance at $1
+.hnegil join NEGIL holding, inbound track 230 degrees, right handpattern, inbound time 1.5 minute, speed 230 knots, expect approach clearance at $1 
+.hmoxam join MOXAM holding, inbound track 220 degrees, right hand pattern, inbound time 1.5 minute, speed 230 knots, expect approach clearance at $1
+.hkelin join KELIN holding, inbound track 170 degrees, right hand pattern, inbound time 1.5 minute, speed 230 knots, expect approach clearance at $1
+.hbak join BAK holding, inbound track 030 degrees, left hand pattern, inbound time 1 minute, speed 230 knots, expect approach clearance at $1
+.hhmr cleared to HMR, join HMR holding inbound track 193 degrees, left hand pattern outbound time 1.5 minute, speed 230 knots or less, expect approach clearance at $1
+.heltok cleared to ELTOK, join ELTOK holding inbound track 106 degrees, left hand pattern outbound time 1.5 minute, speed 230 knots or less, expect approach clearance at $1 
+.hars cleared to ARS, join ARS holding inbound track 237 degrees, right hand pattern outbound time 1 minute, speed 230 knots or less, expect approach clearance at $1
+.hdemor cleared to DEMOR, join DEMOR holding inbound track 095 degrees, left hand pattern outbound time 1.5 minute, speed 265 knots or less, expect approach clearance at $1
+.hpelit cleared to PELIT, join PELIT holding inbound track 050 degrees, right hand pattern outbound time 1.5 minute, speed 265 knots or less, expect approach clearance at $1
+//----------------------------------------------------------------------
+// ******** SPECIAL **********
+.ven proceed direct VENOM, intercept $star arrival for runway $arrrwy  [fly direct VENOM and  AFTER VENOM heading $3 vectoring for ILS approach runway $arrrwy]
+.dva descend FL120, to cross TIGBA below FL190
+.cc .center 
