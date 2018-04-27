@@ -29,18 +29,18 @@
 // **** ON GROUND ****
 .pb pushback approved
 .su start-up approved
-.supb start-up and pushback approved
+.ps pushback and start-up approved
 //----------------------------------------------------------------------
 // *** CLEARANCE ***
 .dci start-up approved, cleared to $arr via $sid departure, squawk $squawk. Information $atiscode($dep) valid QNH $altim($DEP) .
-.dc Information §atiscode(§dep) correct. Start-up approved, cleared to $arr via $sid departure, initially $temp, squawk $squawk.
+.dc Information $atiscode($dep) correct. Start-up approved, cleared to $arr via $sid departure, initially $temp, squawk $squawk.
 .ddct start-up approved, cleared to $arr via direct $1, initially $temp, squawk $squawk.
 .drh start-up approved, cleared to $arr after departure climb runway heading $temp, radar vectoring to $2, squawk $squawk .
 .rb readback correct
 //----------------------------------------------------------------------
 // *** TAXI ***
 .hp taxi to holding point runway $deprwy
-.hpy taxi to holding point runway $deprwy intersection $1 aprooved
+.hpy taxi to holding point runway $deprwy intersection $1 approved
 .hpv taxi to holding point runway $deprwy via taxiway $1
 .tl taxi and line-up runway $deprwy via $1
 .tlb taxi and line-up runway $deprwy via $1 and backtrack
@@ -48,7 +48,8 @@
 .sv taxi to stand $1 via taxiway $2
 //----------------------------------------------------------------------
 // **** ON THE RUNWAY
-.lu line-up runway $deprwy
+.lu line-up runway $deprwy and wait
+.lus line-up in sequence runway $deprwy and wait
 .cto wind $wind($dep) , runway $deprwy cleared for take-off
 .ap taxi to stand $1, via backtrack and $2
 .on onground $1
@@ -95,8 +96,10 @@
 .rs18 reduce speed 180 knots
 .rs16 reduce speed 160 knots
 .out16 maintain speed 160 knots until outermaker
+.s16 maintain speed 160 knots until distance 4NM
 .s86 maintain speed 180 knots until distance 6NM and speed 160 knots until distance 4NM
 .rsmin reduce minimum approach speed
+.ns Resume normal speed, no ATC speed restriction
 //----------------------------------------------------------------------
 // *** TURN / HEADING ***
 .fh fly heading $1
@@ -174,7 +177,7 @@
 .fn NOTAM - To leave the freq unattended for a period, please let me know before - thanks.
 //----------------------------------------------------------------------
 // ***** APPROACH *****
-.info number $1 in sequence, expect about $2 track miles
+.info number $1 in sequence, expect around $2 track miles
 // ----------------------------------------------------------------------
 // **** HOLDINGS ****
 .hold proceed to $1, hold $1 as published, expected approach time $2

@@ -2,7 +2,7 @@
 // Sweden Control, Stockholm Control and Arlanda positions
 //----------------------------------------------------------------------
 // **** CHATT ****
-.m .chat
+//.m .chat
 .fpl please, re-send your flightplan
 //----------------------------------------------------------------------
 // **** CONTACT MESSAGES ****
@@ -15,7 +15,8 @@
 .sq squawk $squawk
 .sc squawk mode C
 .r Sweden Control identified
-.rc Sweden Control identified, climb to FL $2
+.rc Sweden Control identified, climb to FL $1
+.rmf Sweden Control identified, maintain FL $1
 .sr Stockholm identified, climb to FL $1
 .rar Stockholm identified, information $atiscode($arr) valid
 .ar Stockholm Arrival identified
@@ -30,7 +31,7 @@
 // **** ON GROUND ****
 .pb pushback approved
 .su start-up approved
-.supb start-up and pushback approved
+.ps pushback and start-up approved
 //----------------------------------------------------------------------
 // *** CLEARANCE ***
 .dci start-up approved, cleared to $arr via $sid departure, squawk $squawk. Information $atiscode($dep) valid QNH $altim($DEP) .
@@ -41,16 +42,16 @@
 //----------------------------------------------------------------------
 // *** TAXI ***
 .hp taxi to holding point runway $deprwy
-.hpy taxi to holding point runway $deprwy intersection §1 aprooved
-.hpv taxi to holding point runway $deprwy via taxiway §1
+.hpy taxi to holding point runway $deprwy intersection $1 aprooved
+.hpv taxi to holding point runway $deprwy via taxiway $1
 .tl taxi and line-up runway $deprwy via $1
 .tlb taxi and line-up runway $deprwy via $1 and backtrack
 .s taxi to stand $1
 .sv taxi to stand $1 via taxiway $2
 //----------------------------------------------------------------------
 // **** ON THE RUNWAY
-.lu line-up runway $deprwy
-.lus line-up in sequence runway $deprwy
+.lu line-up runway $deprwy and wait
+.lus line-up in sequence runway $deprwy and wait
 .cto wind $wind($dep) , runway $deprwy cleared for take-off
 .ap taxi to stand $1, via backtrack and $2
 .on onground $1
@@ -65,6 +66,7 @@
 // *** DESCEND / CLIMB ***
 .d descend FL $1
 .c climb FL $1
+.m maintain FL $1
 .w when ready descend FL $1
 .dm descend and maintain FL $1 when reaching due to traffic
 .cm climb and maintain FL $1 when reaching due to traffic
@@ -96,8 +98,10 @@
 .rs18 reduce speed 180 knots
 .rs16 reduce speed 160 knots
 .out16 maintain speed 160 knots until outermaker
+.s16 maintain speed 160 knots until distance 4NM
 .s86 maintain speed 180 knots until distance 6NM and speed 160 knots until distance 4NM
 .rsmin reduce minimum approach speed
+.rn Resume normal speed, no ATC speed restriction
 //----------------------------------------------------------------------
 // *** TURN / HEADING ***
 .fh fly heading $1
@@ -111,6 +115,9 @@
 .tr5 turn right 5 degrees and report new heading (due traffic)
 .own resume own navigation direct $1 (free of conflicting traffic)
 .dct fly direct to $1
+.dctaw fly direct to $1 join $STAR arrival for runway $arrrwy, when ready descend  to FL $2
+.dctad fly direct to $1 to join $STAR arrival for runway $arrrwy, descend  to FL $2
+.dcta fly direct to $1 to join  $STAR for runway $arrrwy
 //----------------------------------------------------------------------
 // **** TRANSFER OF COMMUNICATION ****
 //.ct contact $1 frequency $2
@@ -120,11 +127,11 @@
 //Arvids
 
 .ct Contact $radioname($1) $freq($1) ($atccallsign($1))
-.cso Contact $radioname($1) ($atccallsign($1)), callsign only, $freq($1)
-.rh Report your heading to $radioname($1) ($atccallsign($1)) $freq($1)
-.rs Report your speed to $radioname($1) ($atccallsign($1)) $freq($1)
-.rhs Report your heading and speed to $radioname($1) ($atccallsign($1)) $freq($1)
-.mon Monitor $radioname($1) ($atccallsign($1)) $freq($1)
+//.cso Contact $radioname($1) ($atccallsign($1)), callsign only, $freq($1)
+//.rh Report your heading to $radioname($1) ($atccallsign($1)) $freq($1)
+//.rs Report your speed to $radioname($1) ($atccallsign($1)) $freq($1)
+//.rhs Report your heading and speed to $radioname($1) ($atccallsign($1)) $freq($1)
+//.mon Monitor $radioname($1) ($atccallsign($1)) $freq($1)
 
 .cts1 Contact Sweden Control 118.400
 .cts2 Contact Sweden Control 133.700
@@ -203,7 +210,7 @@
 .ctno19 Contact Norway Control 131.100
 .ctno25 Contact Norway Control 126.450
 .ctno24 Contact Norway Control 118.550
-.ctnor Contact Norway Control 125.5
+.ctnor Contact Norway Control 125.500
 .ctnors Contact Norway Control 118.550
 
 .ctngw Contact Oslo Approach 120.450
@@ -244,7 +251,7 @@
 .ctedwm Contact Bremen Radar 124.170
 .ctedwb Contact Bremen Radar 123.225
 .ctedwa Contact Bremen Radar 123.925
-.ctedww Contact Bremen Radar 128.750
+.ctedww Contact Bremen Radar 125.025
 .ctedue Contact Rhein Radar 128.075
 
 .cteurn Contact Eurocontrol North 133.450
@@ -260,13 +267,13 @@
 //----------------------------------------------------------------------
 // **** STATUS MESSAGES ****
 .dep wind $wind($dep), departure runway $deprwy, temperature $1, QNH $altim($DEP).
-.arr metreport $arr, wind $1 degrees $3 knots, temperature $4 dewpoint $5, QNH $6, runway $7 in use.
+.arr metreport $arr, wind $1 degrees $3 knots, temperature $4 dewpoint $5, QNH $6, runway $7 in use, TRL $8.
 .close To all stations on this frequency Sweden control is now closing monitor unicom 122.8 - good bye
 .many to all stations on this frequency, at the moment we have heavy traffic and many pilots on the frequency, please, listen carefully to ATC instructions. Please, respond swiftly and make an effort to readback correctly. Thanks!
 .fn NOTAM - To leave the freq unattended for a period, please let me know beforehand - thanks.
 //----------------------------------------------------------------------
 // ***** APPROACH *****
-.info number $1 in sequence, expect about $2 track miles
+.info number $1 in sequence, expect around $2 track miles
 // ----------------------------------------------------------------------
 // **** HOLDINGS ****
 // ****
