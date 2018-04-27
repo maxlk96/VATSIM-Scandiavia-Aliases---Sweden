@@ -172,11 +172,11 @@
 .ctfe Contact Arrival 120.500, use your callsign only
 .ctfw Contact Arrival 119.620, use your callsign only
 
-.ctge Contact Gï¿½teborg Control 124.675
-.ctgw Contact Gï¿½teborg Control 124.200
+.ctge Contact Göteborg Control 124.675
+.ctgw Contact Göteborg Control 124.200
 .ctgf Contact Arrival 120.120
 
-.ctokc Contact ï¿½stgï¿½ta Control 132.950
+.ctokc Contact Östgöta Control 132.950
 
 .cttw Contact Tower 118.500
 .ctte Contact Tower 128.725
@@ -189,18 +189,18 @@
 .ctsb Contact Bromma Tower 118.100
 .stbg Contact Bromma Ground 121.600
 
-.ctow Contact Vï¿½sterï¿½s Tower 120.300
-.ctoc Contact Vï¿½sterï¿½s Control 125.950
+.ctow Contact Västerås Tower 120.300
+.ctoc Contact Västerås Control 125.950
 
 .ctgg Contact Tower 118.600
 .ctlgr Contact Ground 121.900
 .ctlcd Contact Delivery 121.675
 
-.ctokc Contact ï¿½stgï¿½ta Control 132.950
+.ctokc Contact Östgöta Control 132.950
 
 .ctmq Contact Kalmar Tower 130.800
 
-.ctgj Contact Jï¿½nkï¿½ping Tower 118.250
+.ctgj Contact Jönköping Tower 118.250
 
 .ctms Contact Tower 118.800
 .ctmg Contact Ground 121.700
@@ -211,7 +211,7 @@
 .ctchw Contact Copenhagen Approach 119.800
 .ctche Contact Copenhagen Approach 118.450
 
-.ctkrn Contact Rï¿½nne 118.325
+.ctkrn Contact Rønne 118.325
 
 .ctno4 Contact Norway Control 118.875
 .ctno6 Contact Norway Control 120.375
@@ -271,7 +271,7 @@
 .unicom No further ATC available, monitor unicom 122.800
 //----------------------------------------------------------------------
 // **** VFR ****
-.cz lï¿½mna kontrolzonen $1 pï¿½ $2 fot eller lï¿½gre, transponder $squawk
+.cz lämna kontrolzonen $1 på $2 fot eller lägre, transponder $squawk
 .vd leave control zone via $1 at $2 ft or below, squawk $squawk
 //----------------------------------------------------------------------
 // **** STATUS MESSAGES ****
@@ -286,38 +286,71 @@
 // ----------------------------------------------------------------------
 // **** HOLDINGS ****
 // ****
-.hold proceed to $1, hold $1 as published, expected approach time $2
-.holdd cleared to $1, hold $1 inbound track $3 degrees, $4 hand pattern, outbound time $5 minute, speed $6, expected further clearance at $7
-.holdsun cleared to SUN, hold SUN inbound track 335 degrees, left hand pattern, outbound time 1 minute
-.holdovdal join OVDAL holding inbound track 320 degrees, right hand pattern, outbound time 1.5 minute, speed 260 knots or less
-.holdtigba join TIGBA holding inbound track 170 degrees, right hand pattern, outbound time 1.5 minute, speed 260 knots or less
-.holdgevru join GEVRU holding inbound track 340 degrees, left hand pattern, outbound time 1.5 minute, speed 260 knots or less
-.holdmilnu cleared to MILNU, hold MILNU inbound track 095 degrees, left hand pattern, outbound time 1.5 minute, expected further clearance at $1
-.holdrasen cleared to RASEN, hold RASEN inbound track 040 degrees, right hand pattern, outbound time 1.5 minute, expected further clearance at $1
-.holddetmo cleared to DETMO, hold DETMO inbound track 025 degrees, right hand pattern, outbound time 1.5 minute, expected further clearance at $1
-.holdedaxa cleared to EDAXA, hold EDAXA inbound track 015 degrees, left hand pattern, outbound time 1.5 minute, expected further clearance at $1
-.holdunkas cleared to UNKAS, hold UNKAS inbound track 070 degrees, right hand pattern, outbound time 1.5 minute, expected further clearance at $1
-.holdbesla cleared to BESLA, hold BESLA inbound track 020 degrees, right hand pattern, outbound time 1.5 minute, expected further clearance at $1
-.holdelbog cleared to ELBOG, hold ELBOG inbound track 055 degrees, left hand pattern, outbound time 1.5 minute, expected further clearance at $1
-.holdbakil cleared to BAKIL, hold BAKIL inbound track 030 degrees, right hand pattern, outbound time 1.5 minute, expected further clearance at $1
-.holdpelup cleared to PELUP, hold PELUP inbound track 034 degrees, right hand pattern, outbound time 1.5 minute, expected further clearance at $1
-.holdpelit cleared to PELIT, hold PELIT inbound track 046 degrees, right hand pattern, outbound time 1.5 minute, expected further clearance at $1
-.holdnekla cleared to NEKLA, hold NEKLA inbound track 309 degrees, right hand pattern, outbound time 1.5 minute, expected further clearance at $1
-.holdtekva cleared to TEKVA, hold TEKVA inbound track 276 degrees, left hand pattern, outbound time 1.5 minute, expected further clearance at $1
-.holdxenta cleared to XENTA, hold XENTA inbound track 348 degrees, left hand pattern, outbound time 1.5 minute, expected further clearance at $1
-.holdkra cleared to KRA (Kiruna VOR), hold KRA inbound track 211 degrees, left hand pattern, outbound time 1.0 minute, speed 230 knots, expect further clearance at $1
-.halm cleared to ALM, hold ALM inbound track 294 degrees, right hand pattern outbound time 1.5 minute, speed 230 knots or less, expect approach clearance at $1
-.hbalvi cleared to BALVI, hold north BALVI inbound track 115 degrees, left hand pattern outbound time 1 minute, speed 230 knots or less, expect approach cleareance at $1
-.hlna cleared to LNA, hold north LNA inbound track 082 degrees, left hand pattern, outbound time 1 minute, speed 170 knots, expect approach clearance at $1
-.hnegil join NEGIL holding, inbound track 230 degrees, right handpattern, inbound time 1.5 minute, speed 230 knots, expect approach clearance at $1 
-.hmoxam join MOXAM holding, inbound track 220 degrees, right hand pattern, inbound time 1.5 minute, speed 230 knots, expect approach clearance at $1
-.hkelin join KELIN holding, inbound track 170 degrees, right hand pattern, inbound time 1.5 minute, speed 230 knots, expect approach clearance at $1
-.hbak join BAK holding, inbound track 030 degrees, left hand pattern, inbound time 1 minute, speed 230 knots, expect approach clearance at $1
-.hhmr cleared to HMR, join HMR holding inbound track 193 degrees, left hand pattern outbound time 1.5 minute, speed 230 knots or less, expect approach clearance at $1
-.heltok cleared to ELTOK, join ELTOK holding inbound track 106 degrees, left hand pattern outbound time 1.5 minute, speed 230 knots or less, expect approach clearance at $1 
-.hars cleared to ARS, join ARS holding inbound track 237 degrees, right hand pattern outbound time 1 minute, speed 230 knots or less, expect approach clearance at $1
-.hdemor cleared to DEMOR, join DEMOR holding inbound track 095 degrees, left hand pattern outbound time 1.5 minute, speed 265 knots or less, expect approach clearance at $1
-.hpelit cleared to PELIT, join PELIT holding inbound track 050 degrees, right hand pattern outbound time 1.5 minute, speed 265 knots or less, expect approach clearance at $1
+.ch cancel holding
+.h proceed to $1, hold $1 as published, expect further clearence $2
+.hd cleared to $1, hold $1 inbound track $3 degrees, $4 hand pattern, outbound time $5 minute, speed $6, expect further clearance $7
+//.hsun cleared to SUN, hold SUN inbound track 335 degrees, left hand pattern, outbound time 1 minute, expect further clearance $1
+//.hovdal join OVDAL holding inbound track 320 degrees, right hand pattern, outbound time 1.5 minute, speed 260 knots or less, expect further clearance $1
+//.htigba join TIGBA holding inbound track 170 degrees, right hand pattern, outbound time 1.5 minute, speed 260 knots or less, expect further clearance $1
+//.hgevru join GEVRU holding inbound track 340 degrees, left hand pattern, outbound time 1.5 minute, speed 260 knots or less, expect further clearance $1
+//.hmilnu cleared to MILNU, hold MILNU inbound track 095 degrees, left hand pattern, outbound time 1.5 minute, expect further clearance $1
+//.hrasen cleared to RASEN, hold RASEN inbound track 040 degrees, right hand pattern, outbound time 1.5 minute, expect further clearance $1
+//.hdetmo cleared to DETMO, hold DETMO inbound track 025 degrees, right hand pattern, outbound time 1.5 minute, expect further clearance $1
+//.hedaxa cleared to EDAXA, hold EDAXA inbound track 015 degrees, left hand pattern, outbound time 1.5 minute, expect further clearance $1
+//.hunkas cleared to UNKAS, hold UNKAS inbound track 070 degrees, right hand pattern, outbound time 1.5 minute, expect further clearance $1
+//.hbesla cleared to BESLA, hold BESLA inbound track 020 degrees, right hand pattern, outbound time 1.5 minute, expect further clearance $1
+//.helbog cleared to ELBOG, hold ELBOG inbound track 055 degrees, left hand pattern, outbound time 1.5 minute, expect further clearance $1
+//.hbakil cleared to BAKIL, hold BAKIL inbound track 030 degrees, right hand pattern, outbound time 1.5 minute, expect further clearance $1
+//.hpelup cleared to PELUP, hold PELUP inbound track 034 degrees, right hand pattern, outbound time 1.5 minute, expect further clearance $1
+//.hpelit cleared to PELIT, hold PELIT inbound track 046 degrees, right hand pattern, outbound time 1.5 minute, expect further clearance $1
+//.hnekla cleared to NEKLA, hold NEKLA inbound track 309 degrees, right hand pattern, outbound time 1.5 minute, expect further clearance $1
+//.htekva cleared to TEKVA, hold TEKVA inbound track 276 degrees, left hand pattern, outbound time 1.5 minute, expect further clearance $1
+//.hxenta cleared to XENTA, hold XENTA inbound track 348 degrees, left hand pattern, outbound time 1.5 minute, expect further clearance $1
+//.hkra cleared to KRA (Kiruna VOR), hold KRA inbound track 211 degrees, left hand pattern, outbound time 1.0 minute, speed 230 knots, expect further clearance $1
+//.halm cleared to ALM, hold ALM inbound track 294 degrees, right hand pattern outbound time 1.5 minute, speed 230 knots or less, expect approach clearance at $1
+//.hbalvi cleared to BALVI, hold north BALVI inbound track 115 degrees, left hand pattern outbound time 1 minute, speed 230 knots or less, expect approach cleareance at $1
+//.hlna cleared to LNA, hold north LNA inbound track 082 degrees, left hand pattern, outbound time 1 minute, speed 170 knots, expect approach clearance at $1
+//.hnegil join NEGIL holding, inbound track 230 degrees, right handpattern, inbound time 1.5 minute, speed 230 knots, expect approach clearance at $1 
+//.hmoxam join MOXAM holding, inbound track 220 degrees, right hand pattern, inbound time 1.5 minute, speed 230 knots, expect approach clearance at $1
+//.hkelin join KELIN holding, inbound track 170 degrees, right hand pattern, inbound time 1.5 minute, speed 230 knots, expect approach clearance at $1
+//.hbak join BAK holding, inbound track 030 degrees, left hand pattern, inbound time 1 minute, speed 230 knots, expect approach clearance at $1
+//.hhmr cleared to HMR, join HMR holding inbound track 193 degrees, left hand pattern outbound time 1.5 minute, speed 230 knots or less, expect approach clearance at $1
+//.heltok cleared to ELTOK, join ELTOK holding inbound track 106 degrees, left hand pattern outbound time 1.5 minute, speed 230 knots or less, expect approach clearance at $1 
+//.hars cleared to ARS, join ARS holding inbound track 237 degrees, right hand pattern outbound time 1 minute, speed 230 knots or less, expect approach clearance at $1
+//.hdemor cleared to DEMOR, join DEMOR holding inbound track 095 degrees, left hand pattern outbound time 1.5 minute, speed 265 knots or less, expect approach clearance at $1
+//.hpelit cleared to PELIT, join PELIT holding inbound track 050 degrees, right hand pattern outbound time 1.5 minute, speed 265 knots or less, expect approach clearance at $1
+// ----------------------------------------------------------------------
+// **** SANTA 2017 HOLDS AND REROUTINGS ****
+// ESOS-K Holdings
+.hbesla cleared direct to BESLA, hold BESLA inbound track 060 degrees, left hand pattern, outbound time 1.0 minute, expect further clearance $1
+.hbegdo cleared direct to BEGDO, hold BEGDO inbound track 090 degrees, left hand pattern, outbound time 1.5 minute, expect further clearance $1
+.helbog cleared direct to ELBOG, hold ELBOG inbound track 020 degrees, left hand pattern, outbound time 1.5 minute, expect further clearance $1
+.hrekmi cleared direct to REKMI, hold REKMI inbound track 040 degrees, left hand pattern, outbound time 1.5 minute, expect further clearance $1
+.hsopli cleared direct to SOPLI, hold SOPLI inbound track 020 degrees, left hand pattern, outbound time 1.5 minute, expect further clearance $1
+
+// ESOS-K Routings
+.rbesla cleared direct to BESLA, cleared to Rovaniemi via BESLA M607 NEMGU
+.relbog cleared direct to ELBOG, cleared to Rovaniemi via ELBOG M607 NEMGU
+
+// ESOS-N Holdings
+.hetipu cleared direct to ETIPU, hold ETIPU inbound track 040 degrees, left hand pattern, outbound time 1.5 minute
+.hoss cleared direct to OSS, hold OSS (VOR freq. 114.650) inbound track 045 degrees, right hand pattern, outbound time 1.5 minute
+.hoslav cleared direct to OSLAV, hold OSLAV inbound track 035 degrees, right hand pattern, outbound time 1.5 minute
+.hetomi cleared direct to ETOMI, hold ETOMI inbound track 035 degrees, left hand pattern, outbound time 1.5 minute
+
+// ESOS-N Routing
+.rbegdo fly direct BEGDO, cleared to Rovaniemi via BEGDO DCT BESLA M607 NEMGU
+
+// ESOS-F Holdings
+.hrasen cleared direct to RASEN, hold RASEN inbound track 040 degrees, left hand pattern, outbound time 1.5 minute
+.hedaxa cleared direct to EDAXA, hold EDAXA inbound track 015 degrees, left hand pattern, outbound time 1.5 minute
+.hartab cleared direct to ARTAB, hold ARTAB inbound track 015 degrees, left hand pattern, outbound time 1.5 minute
+
+// ESOS-F (ESMM-5, ESOS-1) Routings
+.relbog fly direct ELBOG, cleared to Rovaniemi via ELBOG M607 NEMGU
+.rbodri fly direct BODRI, cleared to Rovaniemi via BODRI GODOB NEPIX
+.rbakla fly direct BAKLA, cleared to Rovaniemi via BAKLA GODOB NEPIX
+.revlan fly direct EVLAN, cleared to Rovaniemi via EVLAN DIVEG GODOB NEPIX
 //----------------------------------------------------------------------
 // ******** SPECIAL **********
 .ven proceed direct VENOM, intercept $star arrival for runway $arrrwy  [fly direct VENOM and  AFTER VENOM heading $3 vectoring for ILS approach runway $arrrwy]
