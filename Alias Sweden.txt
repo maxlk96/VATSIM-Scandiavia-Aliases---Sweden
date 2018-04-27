@@ -318,6 +318,38 @@
 .hars cleared to ARS, join ARS holding inbound track 237 degrees, right hand pattern outbound time 1 minute, speed 230 knots or less, expect approach clearance at $1
 .hdemor cleared to DEMOR, join DEMOR holding inbound track 095 degrees, left hand pattern outbound time 1.5 minute, speed 265 knots or less, expect approach clearance at $1
 .hpelit cleared to PELIT, join PELIT holding inbound track 050 degrees, right hand pattern outbound time 1.5 minute, speed 265 knots or less, expect approach clearance at $1
+// ----------------------------------------------------------------------
+// **** SANTA 2017 HOLDS AND REROUTINGS ****
+// ESOS-K Holdings
+.hbesla cleared direct to BESLA, hold BESLA inbound track 060 degrees, left hand pattern, outbound time 1.0 minute, expect further clearance $1
+.hbegdo cleared direct to BEGDO, hold BEGDO inbound track 090 degrees, left hand pattern, outbound time 1.5 minute, expect further clearance $1
+.helbog cleared direct to ELBOG, hold ELBOG inbound track 020 degrees, left hand pattern, outbound time 1.5 minute, expect further clearance $1
+.hrekmi cleared direct to REKMI, hold REKMI inbound track 040 degrees, left hand pattern, outbound time 1.5 minute, expect further clearance $1
+.hsopli cleared direct to SOPLI, hold SOPLI inbound track 020 degrees, left hand pattern, outbound time 1.5 minute, expect further clearance $1
+
+// ESOS-K Routings
+.rbesla cleared direct to BESLA, cleared to Rovaniemi via BESLA M607 NEMGU
+.relbog cleared direct to ELBOG, cleared to Rovaniemi via ELBOG M607 NEMGU
+
+// ESOS-N Holdings
+.hetipu cleared direct to ETIPU, hold ETIPU inbound track 040 degrees, left hand pattern, outbound time 1.5 minute
+.hoss cleared direct to OSS, hold OSS (VOR freq. 114.650) inbound track 045 degrees, right hand pattern, outbound time 1.5 minute
+.hoslav cleared direct to OSLAV, hold OSLAV inbound track 035 degrees, right hand pattern, outbound time 1.5 minute
+.hetomi cleared direct to ETOMI, hold ETOMI inbound track 035 degrees, left hand pattern, outbound time 1.5 minute
+
+// ESOS-N Routing
+.rbegdo fly direct BEGDO, cleared to Rovaniemi via BEGDO DCT BESLA M607 NEMGU
+
+// ESOS-F Holdings
+.hrasen cleared direct to RASEN, hold RASEN inbound track 040 degrees, left hand pattern, outbound time 1.5 minute
+.hedaxa cleared direct to EDAXA, hold EDAXA inbound track 015 degrees, left hand pattern, outbound time 1.5 minute
+.hartab cleared direct to ARTAB, hold ARTAB inbound track 015 degrees, left hand pattern, outbound time 1.5 minute
+
+// ESOS-F (ESMM-5, ESOS-1) Routings
+.relbog fly direct ELBOG, cleared to Rovaniemi via ELBOG M607 NEMGU
+.rbodri fly direct BODRI, cleared to Rovaniemi via BODRI GODOB NEPIX
+.rbakla fly direct BAKLA, cleared to Rovaniemi via BAKLA GODOB NEPIX
+.revlan fly direct EVLAN, cleared to Rovaniemi via EVLAN DIVEG GODOB NEPIX
 //----------------------------------------------------------------------
 // ******** SPECIAL **********
 .ven proceed direct VENOM, intercept $star arrival for runway $arrrwy  [fly direct VENOM and  AFTER VENOM heading $3 vectoring for ILS approach runway $arrrwy]
