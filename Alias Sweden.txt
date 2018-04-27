@@ -85,15 +85,22 @@
 .cr- climb FL $1 at $2 feet per minute or less (due traffic)
 //----------------------------------------------------------------------
 // *** SPEED ***
+.dt due traffic
+.fs for sequencing
 .rs reduce to speed $1 knots
-.rias report indicated airspeed
+.ms maintain speed $1 knots
+.rias report indicated airspeed (speed in knots)
 .rm report mach number (speed in mach)
-.i+ then meeting indicated airspeed, maintain speed $1 knots or greater due traffic
-.i- then meeting indicated airspeed, maintain speed $1 knots or less due traffic
-.m+ maintain mach . $1 or greater due traffic
-.m- maintain mach . $1 or less due traffic
-.sc+ maintain speed $1 or greater during climb due traffic
-.sc- maintain speed $1 or less during climb due traffic
+.id+ when meeting indicated airspeed, maintain speed $1 knots or greater
+.id when meeting indicated airspeed, maintain speed $1 knots
+.id- when meeting indicated airspeed, maintain speed $1 knots or less
+.i+ maintain speed $1 knots or greater
+.is maintain speed $1 knots
+.i- maintain speed $1 knots or less
+.m+ maintain mach . $1 or greater
+.m- maintain mach . $1 or less
+.sc+ maintain speed $1 or greater during climb
+.sc- maintain speed $1 or less during climb
 .cs reduce to minimum clean speed
 .rs18 reduce speed 180 knots
 .rs16 reduce speed 160 knots
@@ -104,6 +111,8 @@
 .rn Resume normal speed, no ATC speed restriction
 //----------------------------------------------------------------------
 // *** TURN / HEADING ***
+.mph maintain present heading
+.mrph maintain and report present heading
 .fh fly heading $1
 .tr turn right heading $1
 .tl turn left heading $2
@@ -114,24 +123,24 @@
 .tl5 turn left 5 degrees and report new heading (due traffic)
 .tr5 turn right 5 degrees and report new heading (due traffic)
 .own resume own navigation direct $1 (free of conflicting traffic)
-.dct fly direct to $1
-.dctaw fly direct to $1 join $STAR arrival for runway $arrrwy, when ready descend  to FL $2
-.dctad fly direct to $1 to join $STAR arrival for runway $arrrwy, descend  to FL $2
-.dcta fly direct to $1 to join  $STAR for runway $arrrwy
+.dct cleared direct to $1
+.dctaw cleared direct to $1 join $STAR arrival for runway $arrrwy, when ready descend  to FL $2
+.dctad cleared direct to $1 to join $STAR arrival for runway $arrrwy, descend  to FL $2
+.dcta cleared direct to $1 to join  $STAR for runway $arrrwy
 //----------------------------------------------------------------------
 // **** TRANSFER OF COMMUNICATION ****
 //.ct contact $1 frequency $2
 
-.ctm contact $1 frequency $2
-
-//Arvids
+//Arvids auto-magi
 
 .ct Contact $radioname($1) $freq($1) ($atccallsign($1))
 //.cso Contact $radioname($1) ($atccallsign($1)), callsign only, $freq($1)
-//.rh Report your heading to $radioname($1) ($atccallsign($1)) $freq($1)
-//.rs Report your speed to $radioname($1) ($atccallsign($1)) $freq($1)
-//.rhs Report your heading and speed to $radioname($1) ($atccallsign($1)) $freq($1)
-//.mon Monitor $radioname($1) ($atccallsign($1)) $freq($1)
+.ctrh Contact, and report your heading to $radioname($1) ($atccallsign($1)) $freq($1)
+.ctrs Contact, and report your speed to $radioname($1) ($atccallsign($1)) $freq($1)
+.ctrsh Contact, and report your speed and heading to $radioname($1) ($atccallsign($1)) $freq($1)
+.mon Monitor $radioname($1) ($atccallsign($1)) $freq($1)
+
+//
 
 .cts1 Contact Sweden Control 118.400
 .cts2 Contact Sweden Control 133.700
@@ -163,11 +172,11 @@
 .ctfe Contact Arrival 120.500, use your callsign only
 .ctfw Contact Arrival 119.620, use your callsign only
 
-.ctge Contact Göteborg Control 124.675
-.ctgw Contact Göteborg Control 124.200
+.ctge Contact Gï¿½teborg Control 124.675
+.ctgw Contact Gï¿½teborg Control 124.200
 .ctgf Contact Arrival 120.120
 
-.ctokc Contact Östgöta Control 132.950
+.ctokc Contact ï¿½stgï¿½ta Control 132.950
 
 .cttw Contact Tower 118.500
 .ctte Contact Tower 128.725
@@ -180,18 +189,18 @@
 .ctsb Contact Bromma Tower 118.100
 .stbg Contact Bromma Ground 121.600
 
-.ctow Contact Västerås Tower 120.300
-.ctoc Contact Västerås Control 125.950
+.ctow Contact Vï¿½sterï¿½s Tower 120.300
+.ctoc Contact Vï¿½sterï¿½s Control 125.950
 
 .ctgg Contact Tower 118.600
 .ctlgr Contact Ground 121.900
 .ctlcd Contact Delivery 121.675
 
-.ctokc Contact Östgöta Control 132.950
+.ctokc Contact ï¿½stgï¿½ta Control 132.950
 
 .ctmq Contact Kalmar Tower 130.800
 
-.ctgj Contact Jönköping Tower 118.250
+.ctgj Contact Jï¿½nkï¿½ping Tower 118.250
 
 .ctms Contact Tower 118.800
 .ctmg Contact Ground 121.700
@@ -202,7 +211,7 @@
 .ctchw Contact Copenhagen Approach 119.800
 .ctche Contact Copenhagen Approach 118.450
 
-.ctkrn Contact Rønne 118.325
+.ctkrn Contact Rï¿½nne 118.325
 
 .ctno4 Contact Norway Control 118.875
 .ctno6 Contact Norway Control 120.375
@@ -262,7 +271,7 @@
 .unicom No further ATC available, monitor unicom 122.800
 //----------------------------------------------------------------------
 // **** VFR ****
-.cz lämna kontrolzonen $1 på $2 fot eller lägre, transponder $squawk
+.cz lï¿½mna kontrolzonen $1 pï¿½ $2 fot eller lï¿½gre, transponder $squawk
 .vd leave control zone via $1 at $2 ft or below, squawk $squawk
 //----------------------------------------------------------------------
 // **** STATUS MESSAGES ****

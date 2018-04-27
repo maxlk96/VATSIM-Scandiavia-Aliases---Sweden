@@ -83,15 +83,22 @@
 .cr- climb FL $1 at $2 feet per minute or less (due traffic)
 //----------------------------------------------------------------------
 // *** SPEED ***
+.dt due traffic
+.fs for sequencing
 .rs reduce to speed $1 knots
-.rias report indicated airspeed
+.ms maintain speed $1 knots
+.rias report indicated airspeed (speed in knots)
 .rm report mach number (speed in mach)
-.i+ then meeting indicated airspeed, maintain speed $1 knots or greater due traffic
-.i- then meeting indicated airspeed, maintain speed $1 knots or less due traffic
-.m+ maintain mach . $1 or greater due traffic
-.m- maintain mach . $1 or less due traffic
-.sc+ maintain speed $1 or greater during climb due traffic
-.sc- maintain speed $1 or less during climb due traffic
+.id+ when meeting indicated airspeed, maintain speed $1 knots or greater
+.id when meeting indicated airspeed, maintain speed $1 knots
+.id- when meeting indicated airspeed, maintain speed $1 knots or less
+.i+ maintain speed $1 knots or greater
+.is maintain speed $1 knots
+.i- maintain speed $1 knots or less
+.m+ maintain mach . $1 or greater
+.m- maintain mach . $1 or less
+.sc+ maintain speed $1 or greater during climb
+.sc- maintain speed $1 or less during climb
 .cs reduce to minimum clean speed
 .rs18 reduce speed 180 knots
 .rs16 reduce speed 160 knots
@@ -99,7 +106,7 @@
 .s16 maintain speed 160 knots until distance 4NM
 .s86 maintain speed 180 knots until distance 6NM and speed 160 knots until distance 4NM
 .rsmin reduce minimum approach speed
-.ns Resume normal speed, no ATC speed restriction
+.rn Resume normal speed, no ATC speed restriction
 //----------------------------------------------------------------------
 // *** TURN / HEADING ***
 .fh fly heading $1
